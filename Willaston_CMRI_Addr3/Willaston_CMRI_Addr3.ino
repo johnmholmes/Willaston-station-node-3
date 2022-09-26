@@ -60,6 +60,7 @@ Auto485 bus(DE_PIN); // Arduino pin 2 -> MAX485 DE and RE pins
 CMRI cmri(CMRI_ADDR, 24, 48, bus); // defaults to a SMINI with address 0. SMINI = 24 inputs, 48 outputs
 
 void setup() {
+// Signal pins used as ouptuts
 pinMode (P1_GREEN, OUTPUT);
 pinMode (P1_RED, OUTPUT);
 pinMode (SIDE_GREEN, OUTPUT);
@@ -82,12 +83,16 @@ pinMode (IO38, INPUT_PULLUP);// dock city 1
 pinMode (IO39, INPUT_PULLUP);// dock city 2
 pinMode (IO37, INPUT_PULLUP);// upper level
 
-bus.begin(19200);
+bus.begin(9600);              // Jmri needs the node to be set to the same baud rate for it to work
 }
 
 void loop() {
 
 cmri.process();
+  
+/* These are setup for signals once placed on the layout not yet fitted.
+   they will bethe tmc 2 aspect versions
+*/
 digitalWrite (P1_GREEN, cmri.get_bit(0));    //jmri address 3001
 digitalWrite (P1_RED, cmri.get_bit(1));      //jmri address 3002
 digitalWrite (SIDE_GREEN, cmri.get_bit(2));  //jmri address 3003

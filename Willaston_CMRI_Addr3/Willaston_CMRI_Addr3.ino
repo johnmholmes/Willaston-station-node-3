@@ -1,7 +1,9 @@
 /*
   This code will be changed to comment out the Auto485 library I am using a USB lead and this will also
-  free up pin 2 for other uses in my chase. I  will leave themin so others can see what they would need if the are using the 
+  free up pin 2 for other uses in my chase. I will leave them in so others can see what they would need if the are using the 
   same unit as little wicket shows
+  
+  The sketch was original planned arround using an Arduino Nano but has been changed to run now on a Mega to allow for expansion.
 */
 
 
@@ -13,7 +15,7 @@
 // approaching the station turnout a sensor s**
 // this station has 10 routes avaiable to it
 // pins available to use
-// pins 0 , 1 & 2 are used to control the crmi bus leaving 18 possible devices
+// pins 0 , 1 & 2 are used to control the crmi bus leaving x number of pins available
 // pin 3 route IO34 willaston 1 to peel 1
 // pin 4 route IO35 willaston 1 to peel 2
 // pin 5 route IO32 willaston 1 to dock city 1

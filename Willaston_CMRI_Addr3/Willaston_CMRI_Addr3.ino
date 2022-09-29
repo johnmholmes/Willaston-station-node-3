@@ -1,3 +1,10 @@
+/*
+  This code will be changed to comment out the Auto485 library I am using a USB lead and this will also
+  free up pin 2 for other uses in my chase. I  will leave themin so others can see what they would need if the are using the 
+  same unit as little wicket shows
+*/
+
+
 // Willaston Station has 2 tracks in use platform 1 and a siding this will be used to 
 // control the routes only at the momment but has had the signals added to the code
 // it is served by T10 turnout in jmri thrown platform 1 closed siding
